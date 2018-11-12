@@ -8,21 +8,37 @@
     <script>
       // alert('Hello World!')
       console.log('Secret message')
-      // heello
+      // hello
       let numberOfKittens = 5
       document.write(numberOfKittens + "<br>")
 
       let numberOfPuppies = 8
       let numberOfBabies = 8
-
+//adding strings together
       let numberOfBestFriends = numberOfBabies + numberOfPuppies + "<br>"
 
       document.write(numberOfBestFriends)
-
+//adding strings using += 
       let firstName = "night"
-      firstName += "mare"
+      firstName += "mare" + '<br>'
 
       document.write(firstName)
+//using interpolation, mixing strings and numbers
+      let fruit1 = 'bananas'
+      let allTheFruit = 'apple' + 'bear' + fruit1 + 8 + '!' + '<br>'
+
+      document.write(allTheFruit)
+
+//exercise, calculate the tip from the bill 
+
+    let bill = 14.95
+    let tip = bill * 0.01
+
+    let totalBill = bill + tip
+    let totalBill = totalBill.toFixed()
+
+    document.write("Your total is " + totalBill)
+
 
     </script>
   </body>
