@@ -1,0 +1,127 @@
+<script>
+
+        ////////////THIS IS KIND OF LIKE A DICTIONARY\\\\\\\\\\\\
+    ////////////STILL NEEDS SOME WORK, SOME THINGS ARE BROKEN\\\\\\\\
+
+
+// let i = 108
+
+// while (i != 9){
+//     i -= 9
+//     document.write(i + "<br>")
+// }
+// for (let table = 1; table <= 12; table++){
+//     for (let i=1; 1 <= 12; i++) {
+//         console.log(`${table} x ${i} = ${table * i}`)
+//     }
+//     console.log('-----------------------')
+// }
+
+//arrays
+let myFood = ['lemon', 'noodle','mango','lettuce','udon','crayons']
+let firstFood = document.write(myFood[1] + "<br>")
+
+// let deldel = myFood.splice(2)
+delete myFood[2]
+let secondFood = document.write(myFood)
+
+
+//iteration
+let rainbowColors = ['red','orange','yellow','orange','green','blue','violet']
+
+for (let index in rainbowColors) {
+    console.log(`${index} : ${rainbowColors[index]}`)
+}
+
+let favFood = ['lemon', 'noodle','mango','lettuce','udon','crayons']
+
+for (let index in favFood) {
+    console.log(`${index} : ${favFood[index]}`)
+        if (`${favFood[index]}` == 3){
+            console.log (`${favfood[index]}------------------`)
+        }
+}
+//filtering array elements
+let numbers = [4,5,6,7,8,9,1,2,3,4,0]
+let oddNumbers = numbers.filter(x => x % 2 == 1)
+
+console.log(oddNumbers)
+
+//joining array elements
+let data = [12, 'main', 'road']
+let address = data.join('  i.') 
+
+console.log(address)
+
+//challenge
+let fooFood = ['lemon', 'noodle','mango','lettuce','udon','crayons']
+let voWels = fooFood.filter(x => x % 2 ==1)
+
+console.log(voWels)
+
+//objects, equivalent of hashes in ruby
+
+//making object
+let user = {
+    hometown: 'Atlanta, GA',
+    hair: 'brown',
+    like: ['knitting', 'code'],
+    // birthday: [month: 10, day: 17]
+}
+
+//accessing objects 1
+let usersHomeTown = user.hometown
+console.log(usersHomeTown)
+
+//accessing object 2
+let usersHairColor = user['hair']
+console.log(usersHairColor)
+
+//array of objects
+let users2 = [
+    {name: 'Jolene', age: 21},
+    {name: 'Alexa', age: 18}
+]
+// passing objects into functions
+let jolene = {
+    age: 21,
+    hairColor: 'blue',
+    likes: ['pizza', 'tacos'],
+    birthday: {month: 3, day: 14, year: 1995}
+}
+
+//function to describe user
+function describeUser(user) {
+    console.log('You are ' + user.age + ' years old with ' + user.hairColor
+    + ' hair.')
+}
+
+describeUser(jolene)
+//challenge
+let recipe = {
+    recipeTitle: 'pasta',
+    servings: 3,
+    ingredients: ['flour','water','egg','mushrooms','cream'],
+    directions: 'do stuff with the stuf (it takes like two hours)',
+    letsCook: function(reciipe) {
+        console.log('I\'m hungry! lets cook ' + reciipe)
+    }
+}
+recipe.letsCook('pasta')
+
+//object methods
+let lacey = {
+    age: 30,
+    hairColor: 'Black',
+    talk: function() {
+        console.log('Hello!')
+    },
+    eat: function(food) {
+        console.log('Yum, I love ' + food) 
+    }
+}
+lacey.talk()
+lacey.eat('pizza')
+
+
+</script>

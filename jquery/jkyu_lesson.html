@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+   <title>Video Watcher</title>
+  </head>
+  <body>
+
+    <div class="container">
+ 
+    <div class="row">
+      <div class="span12">
+        <h2 class="page-header">Best Videos Ever ❤</h1>
+      </div>
+    </div>
+ 
+    <div class="row">
+      <div class="span3">
+        <ul>
+          <li id="link1"><a href="https://www.youtube.com/watch?v=TddFnTB_7IM">Trip through the 80s</a></li>
+          <li is="link2"><a href="https://www.youtube.com/watch?v=epUk3T2Kfno">Otters Holding Hands</a></li>
+          <li id="link3"><a href="https://www.youtube.com/watch?v=il2IrgFHfsg">The Ooooh Cat</a></li>
+        </ul>
+       </div>
+     </div>
+    </div>
+
+    <script type="text/javascript" src="youtube.js">
+//listing the links
+        // let videoLinks = document.getElementById('link1', 'link2', 'link3');
+        // document.write(videoLinks);                                  // INSTEAD OF THIS
+//begining iteration
+        for (var i = 0; i < videoLinks.length; i++){
+        var videoLink = videoLinks[i];
+// getting the links, much simpler
+        var linkUrl = videoLink.getAttribute('href');                   //TRY THIS
+//generating the thumbnail
+        var thumbnailUrl = youtube.generateThumbnailUrl(linkUrl);
+        var thumbnailImg = document.createElement('img');
+//setting the thumbnail
+        thumbnailImg.setAttribute('src', thumbnailUrl);
+        videoLink.appendChild(thumbnailImg);
+      }        
+
+    </script>
+  </body>
+</html>

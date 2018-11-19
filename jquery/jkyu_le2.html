@@ -1,0 +1,45 @@
+<html>
+
+    <body>
+
+        <h1 div id="sentence">This is a sentence</h1>
+
+        <p>welcome to jquery</p>
+
+    </body>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js">
+    //enter jquery
+// SECTION ONE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+    //a thing without a library (hiding images)
+        var elems = document.getElementsByTagName('img')
+        for (var el of elems) {
+        el.style.display = 'none'
+        }
+
+    //the same thing but with a library
+        $('img').hide()
+
+    //some text and styling - without a library
+        var p = document.createElement('p')
+        p.appendChild(document.createTextNode('Welcome!'))
+        p.style.cssFloat = 'left'
+        p.style.backgroundColor = 'red'
+        p.className = 'special'
+        document.querySelector('div.header').appendChild(p)
+
+    // the same thing but super unreadable and with a library
+        var newP = $('Welcome!')
+        newP.css({'float': 'left', 'background-color': 'red'})
+        newP.addClass('special')
+        $('div.header').append(newP)
+
+// END SECTION ONE \\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+// ENTER SECTION TWOOOOOO
+        $('p').addClass('special')
+
+    </script>
+
+</html>

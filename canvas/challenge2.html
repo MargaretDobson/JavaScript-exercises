@@ -1,0 +1,66 @@
+<html>
+    <body>
+
+
+    </body>
+
+    <script>
+    
+        const caCha = {
+            me: '',
+            age: 21,
+            location: 'the brew bar and cafe',
+            hobbies: ['code', 'gym', 'photography'],
+            print_details: function(){
+                console.log(caCha.hobbies, caCha.age, 
+                caCha.location)
+            }
+        }
+
+//calling the print details function in the caCha 
+//object
+    console.log(caCha.print_details())
+
+//displaying initial information
+    console.log(caCha)
+
+// displaying both age and location
+    console.log(caCha.age, caCha.location)
+
+// deleting the age element and logging the result
+    delete caCha.age
+    console.log(caCha)
+
+//iterating through the hobbies list
+    for (index in caCha.hobbies){
+        console.log(`${index} : ${caCha.hobbies[index]}`)
+    }
+
+//adding pole to the hobbies list and logging the result
+    caCha.hobbies.push('pole')
+    console.log(caCha)
+
+    delete caCha.hobbies[0]
+    console.log(caCha)
+
+//adding a mother key
+    let caChas_mum = {
+        mama: caCha.parent,
+        age: 56,
+        location: 'yeppon',
+    }
+
+//beast mode ++
+
+const sydney_campus = { state: 'NSW', street: '7 Kelly St' };
+const brisbane_campus = { state: 'QLD', street: '205 N Quay' };
+const melbourne_campus = { state: 'VIC', street: '120 Spencer St' };
+const coder_academy = { sydney: sydney_campus, melbourne: melbourne_campus, brisbane: brisbane_campus };
+
+//logging the brisbane campus state and street
+console.log(brisbane_campus.state, brisbane_campus.street)
+
+
+    </script>
+
+</html>
